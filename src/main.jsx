@@ -1,8 +1,11 @@
-import routes from "/:routes.js";
-import create from "/:create.jsx";
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './components/App'
+import './base.css'
 
-export default {
-  context: import("/:context.js"),
-  routes,
-  create,
-};
+const root = createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
